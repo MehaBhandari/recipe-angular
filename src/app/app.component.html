@@ -1,21 +1,62 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div>
   <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    {{ title }}
+  </h1>  
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4" style="border: 1px solid black; width:400px;"> 
+        <b>Filters</b>
+        <div style=" text-align: center;">
+          <span>Launch Year</span>
+          <hr>
+          <div class="container">
+            <div class="row">
+              <div *ngFor="let year of getAllYearsArray" class="col-xs-6">
+                <button (click)="yearSelected(year.year)" class="btn active"> {{year.year}}</button>
+              </div>
+            </div>            
+          </div>
+        </div>
+        <div style=" text-align: center;">
+          <span>Successful Launch</span>
+          <hr>
+          <div class="container">
+            <div class="row">
+              <div *ngFor="let filterVal of booleanFIlter" class="col-xs-6">
+                <button (click)="sucessLaunchSelected(filterVal.filterName)" class="btn active"> {{filterVal.filterName}}</button>
+              </div>
+            </div>            
+          </div>
+        </div>
+        <div style=" text-align: center;">
+          <span>Successful Landing</span>
+          <hr>
+          <div class="container">
+            <div class="row">
+              <div *ngFor="let filterVal of booleanFIlter" class="col-xs-6">
+                <button (click)="sucessLandingSelected(filterVal.filterName)" class="btn active"> {{filterVal.filterName}}</button>
+              </div>
+            </div>            
+          </div>
+        </div>      
+      </div>
+    </div>    
+    <div class="row">
+      <div *ngFor="let flight of getAllProjects" class="col-xs-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" [src]="flight.links.mission_patch_small" alt="Card image cap">
+          <div class="card-body">
+            <b>{{flight.mission_name}} #{{flight.flight_number}}</b> <br>
+            <b>Mission Ids: </b> <span>{{flight.mission_id[0]}}</span> <br>
+            <b>Launch Year: </b> <span>{{flight.launch_year}}</span> <br>
+            <b>Successful Launch: </b> <span>{{flight.launch_success}}</span> <br>
+            <b>Successful Landing: </b> <span>{{flight.launch_success}}</span> <br>
+          </div>
+        </div>     
+      </div>     
+    </div>    
+  </div>
+  <div>Developed by: {{developerName}}</div>
+  
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
