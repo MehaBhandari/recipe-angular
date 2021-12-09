@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy, Input} from '@angular/core';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,10 @@ export class AppComponent implements OnInit, OnDestroy {
   developerName = 'Meha Bhandari';
   
   ngOnInit() {
+    of(['Apple','Banana', 'Orange']).subscribe(
+      (item)=>{ console.log(`Available fruits are: ${item}`)},
+      (err)=>{ console.log(`Error message is: ${err}`)}
+    );
   }
 
   ngOnDestroy() {
