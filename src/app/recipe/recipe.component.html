@@ -1,4 +1,6 @@
-<h2>Here starts our cooking</h2>
+<h1>Hello Recipe</h1>
+<h2>Welcome to our food hub. Here starts our cooking...</h2>
+<a routerLink="/home"> Go back to Home Page</a>
 <div style="margin-top: 2rem;" *ngIf="recipeList" class="row">
     <div class="col-lg-3 mb-4 card" style="max-width: 25rem; margin-left: 1rem;" *ngFor="let recipe of recipeList">
         <img class="card-img-top" src={{recipe.image}} alt="Card image" style="height: 35rem; width:100%">

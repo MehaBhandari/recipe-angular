@@ -8,6 +8,7 @@ import {map, tap} from 'rxjs/operators';
 })
 
 export class RecipeComponent implements OnInit, OnDestroy {
+  private recipeObservable$;
     private recipeList = [
         {
           image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/chia-pudding-280x280.jpg',
@@ -45,7 +46,7 @@ export class RecipeComponent implements OnInit, OnDestroy {
     this.fetchRecipeList();
     }
     fetchRecipeList() {
-        from(this.recipeList).pipe(
+        this.recipeObservable$ = from(this.recipeList).pipe(
           tap(console.log)
         ).subscribe(
           recipeList => recipeList
@@ -53,5 +54,6 @@ export class RecipeComponent implements OnInit, OnDestroy {
     }
     
     ngOnDestroy() {
+      this.recipeObservable$.unsubscribe();
     }
 }

@@ -7,6 +7,7 @@ import { AttributeSelectorComponent } from './selectors/attribute-selector/attri
 import { RecipeComponent } from './recipe/recipe.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
   { path: 'attributeSelectorComponent', component: AttributeSelectorComponent, pathMatch: 'full' },
   { path: 'selectorLandingComponent', component: SelectorLandingComponent, pathMatch: 'full' },
