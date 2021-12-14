@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { AttributeSelectorComponent } from './selectors/attribute-selector/attribute-selector.component';
 import { ClassSelectorComponent } from './selectors/class-selector/class-selector.component';
 import { NormalSelectorComponent } from './selectors/normal-selector/normal-selector.component';
@@ -13,6 +14,7 @@ import { RecipeComponent } from './recipe/recipe.component';
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     AttributeSelectorComponent,
     ClassSelectorComponent,
     NormalSelectorComponent,
