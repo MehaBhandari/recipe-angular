@@ -3,27 +3,10 @@
     <h2>Welcome to our food hub</h2>
     <p>Check console for usage of <strong>"of"</strong> keyword to create streams of Observable...</p>
     <div>
-        <h3>Click here to check types of selectors</h3>
-        <a routerLink="/selectorLandingComponent"> Click here</a>
-    </div>
-    <div>
-        <h3>Click here to check recipes</h3>
-        <a routerLink="/recipeComponent"> Click here</a>
+        <h3>Choose following</h3>
+        <a routerLink="/selectorLandingComponent"> Check types of Selector</a>
+        <a routerLink="/recipeComponent"> Check Recipe</a>
+        <a routerLink="/home"> Go back to home</a>
     </div>
     <router-outlet></router-outlet>
-    
-    <!-- <normal-selector></normal-selector>
-    <div app-attribute-selector ></div>
-    <div class="app-class-selector"></div> -->
-    <!-- <h2>Here starts our cooking</h2>
-    <div style="margin-top: 2rem;" *ngIf="recipeList" class="row">
-        <div class="col-lg-3 mb-4 card" style="max-width: 25rem; margin-left: 1rem;" *ngFor="let recipe of recipeList">
-            <img class="card-img-top" src={{recipe.image}} alt="Card image" style="height: 35rem; width:100%">
-            <div class="card-body">
-              <h4 class="card-title">{{recipe.name}}</h4>
-              <p class="card-text">{{recipe.description}}</p>
-              <a href="#" class="btn btn-primary">Check Recipe</a>
-            </div>
-        </div>
-    </div> -->
 </div>

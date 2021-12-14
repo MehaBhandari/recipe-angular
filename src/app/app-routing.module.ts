@@ -6,12 +6,10 @@ import { AttributeSelectorComponent } from './selectors/attribute-selector/attri
 import { RecipeComponent } from './recipe/recipe.component';
 
 const routes: Routes = [
-  { path: '/', component: AppComponent },
-  { path: 'attributeSelectorComponent', component: AttributeSelectorComponent },
-  { path: 'selectorLandingComponent', component: SelectorLandingComponent },
-  { path: 'recipeComponent', component: RecipeComponent }
-
-  
+  { path: 'home', component: AppComponent, pathMatch: 'full' },
+  { path: 'attributeSelectorComponent', component: AttributeSelectorComponent, pathMatch: 'full' },
+  { path: 'selectorLandingComponent', component: SelectorLandingComponent, pathMatch: 'full' },
+  { path: 'recipeComponent', component: RecipeComponent, pathMatch: 'full' }  
 ];
 
 @NgModule({
