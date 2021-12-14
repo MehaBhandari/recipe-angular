@@ -1,0 +1,11 @@
+<h2>Here starts our cooking</h2>
+<div style="margin-top: 2rem;" *ngIf="recipeList" class="row">
+    <div class="col-lg-3 mb-4 card" style="max-width: 25rem; margin-left: 1rem;" *ngFor="let recipe of recipeList">
+        <img class="card-img-top" src={{recipe.image}} alt="Card image" style="height: 35rem; width:100%">
+        <div class="card-body">
+            <h4 class="card-title">{{recipe.name}}</h4>
+            <p class="card-text">{{recipe.description}}</p>
+            <a href="#" class="btn btn-primary">Check Recipe</a>
+        </div>
+    </div>
+</div>

@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { AttributeSelectorComponent } from './selectors/attribute-selector/attribute-selector.component';
 import { ClassSelectorComponent } from './selectors/class-selector/class-selector.component';
 import { NormalSelectorComponent } from './selectors/normal-selector/normal-selector.component';
+import { SelectorLandingComponent } from './selectors/selector.landing.component';
+import { RecipeComponent } from './recipe/recipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AttributeSelectorComponent,
     ClassSelectorComponent,
-    NormalSelectorComponent
+    NormalSelectorComponent,
+    SelectorLandingComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,
