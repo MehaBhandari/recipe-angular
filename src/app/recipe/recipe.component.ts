@@ -15,6 +15,11 @@ export class RecipeComponent implements OnInit, OnDestroy {
   ngOnInit() {        
   this.fetchRecipeList();
   }
+
+  helloFunction() {
+    return "Hi there"
+  }
+
   fetchRecipeList() {
     this.recipeObservable = this.recipeService.fetchRecipeList().pipe(
       tap(console.log)
