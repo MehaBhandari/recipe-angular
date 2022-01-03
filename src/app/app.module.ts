@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { ClassSelectorComponent } from './selectors/class-selector/class-selecto
 import { NormalSelectorComponent } from './selectors/normal-selector/normal-selector.component';
 import { SelectorLandingComponent } from './selectors/selector.landing.component';
 import { RecipeComponent } from './recipe/recipe.component';
+import { ChildComponent } from './view-child/child.component';
+import { ParentComponent } from './view-child/parent.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,16 @@ import { RecipeComponent } from './recipe/recipe.component';
     ClassSelectorComponent,
     NormalSelectorComponent,
     SelectorLandingComponent,
-    RecipeComponent
+    RecipeComponent,
+    ChildComponent,
+    ParentComponent
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
